@@ -1,5 +1,7 @@
 # TckBetterRequestLogs
 
+[![Build Status](https://travis-ci.org/the-cocktail/tck_better_request_logs.png)](https://travis-ci.org/the-cocktail/tck_better_request_logs)
+
 Al añadir la gema crea un nuevo log al final de cada petición con información adicional.
 
 ## Installation
