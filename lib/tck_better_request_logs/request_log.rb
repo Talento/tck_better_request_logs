@@ -10,7 +10,7 @@ module TckBetterRequestLogs
     end
 
     def log
-      "TCK Request Completed #{time} status=#{payload[:status]} path=[#{payload[:path]}] format=#{payload[:format]} (views=#{payload[:view_runtime].to_i}ms | db=#{payload[:db_runtime].to_i}ms) in #{runtime}ms pid=#{Process.pid}"
+      "TCK Request Completed #{time} status=#{payload[:status]} path=[#{payload[:path]}] format=#{payload[:format]} (#{TckBetterRequestLogs.log_segments.map {|segment| segment.call(payload) }.join(" | ")}) in #{runtime}ms pid=#{Process.pid}"
     end
 
     private
