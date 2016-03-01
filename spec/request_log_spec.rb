@@ -1,4 +1,5 @@
-require 'tck_better_request_logs/request_log'
+require 'rails'
+require 'tck_better_request_logs'
 
 describe TckBetterRequestLogs::RequestLog do
 
