@@ -1,4 +1,5 @@
 require "tck_better_request_logs/engine"
+require "tck_better_request_logs/configuration"
 require "tck_better_request_logs/version"
 require "tck_better_request_logs/request_log"
 
@@ -9,8 +10,8 @@ module TckBetterRequestLogs
       ActiveSupport::Notifications.subscribe "process_action.action_controller" do |name, start, finish, id, payload|
         runtime = ((finish - start)*1000).to_i
         Rails.logger.info TckBetterRequestLogs::RequestLog.new(payload, runtime).log
-      end 
-    end    
+      end
+    end
   end
 
 end

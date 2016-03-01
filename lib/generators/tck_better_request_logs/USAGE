@@ -1,0 +1,8 @@
+Description:
+    Generates an initializer with the log segments being used by the tck_better_request_logs gem
+
+Example:
+    rails g tck_better_request_logs:config
+
+    This will create:
+        config/initializers/tck_better_request_logs.rb
