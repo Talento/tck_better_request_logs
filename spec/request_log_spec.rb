@@ -14,15 +14,15 @@ RSpec.describe TckBetterRequestLogs::RequestLog do
 
   describe '#log' do
     it do
-      subject.log.should_not be_empty
+      expect(subject.log).not_to be_empty
     end
 
     it 'contains path' do
-      subject.log.should =~ /path=\[\/home/
+      expect(subject.log).to match(/path=\[\/home/)
     end
 
     it 'contains format' do
-      subject.log.should =~ /format=html/
+      expect(subject.log).to match(/format=html/)
     end
   end
 end
