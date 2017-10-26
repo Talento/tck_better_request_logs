@@ -1,23 +1,19 @@
-require 'tck_better_request_logs/request_log'
-
-describe TckBetterRequestLogs::RequestLog do
-
+RSpec.describe TckBetterRequestLogs::RequestLog do
   let(:runtime) { 1000 }
-
   let(:payload) do
     {
-        status: 200, format: 'html', method: 'GET', path: '/home?foo=bar', params: {
-          'controller' => 'home', 'action' => 'index', 'foo' => 'bar'
-        }, db_runtime: 0.02, view_runtime: 0.01
+      status: 200, format: 'html', method: 'GET', path: '/home?foo=bar', params: {
+        'controller' => 'home', 'action' => 'index', 'foo' => 'bar'
+      }, db_runtime: 0.02, view_runtime: 0.01
     }
   end
 
   subject do
     TckBetterRequestLogs::RequestLog.new payload, runtime
-  end  
+  end
 
   describe '#log' do
-    it do 
+    it do
       subject.log.should_not be_empty
     end
 
@@ -28,7 +24,6 @@ describe TckBetterRequestLogs::RequestLog do
     it 'contains format' do
       subject.log.should =~ /format=html/
     end
-
   end
-
 end
+
