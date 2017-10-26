@@ -1,3 +1,4 @@
+require "rails"
 require "tck_better_request_logs/version"
 require "tck_better_request_logs/request_log"
 
