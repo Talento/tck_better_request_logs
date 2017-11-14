@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    tck_better_request_logs (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  tck_better_request_logs!
+
+BUNDLED WITH
+   1.16.0
