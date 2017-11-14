@@ -1,10 +1,8 @@
 module TckBetterRequestLogs
-
   class RequestLog
-
     attr_accessor :payload, :runtime
 
-    def initialize payload, runtime
+    def initialize(payload, runtime)
       self.payload = payload
       self.runtime = runtime
     end
@@ -14,9 +12,9 @@ module TckBetterRequestLogs
     end
 
     private
+
     def time
       Time.now.strftime("%Y-%m-%d %H:%M:%s")
     end
   end
-
 end
